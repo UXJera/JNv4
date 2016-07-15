@@ -1,0 +1,315 @@
+@import "global";
+
+// Home Page
+
+.content-box {
+	min-height: 354px;
+	margin-right: 2.5%;
+	@media screen and (max-width: 1200px) { 
+		min-height: 340px;
+		}
+	img { 
+		background: $bg-faint; 
+		padding: 0;
+		max-height: 200px;	
+		border-radius: 10px 0px 0px 0px;
+		border: 2px solid black;
+		border-bottom: none;
+		margin-bottom: 0;
+			@media screen and (max-width: 770px) {
+				border-radius: 10px 10px 0 0;
+			}
+		}
+	h3 {
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-top: 65px;
+		height: 200px;
+		color: $baseblue;
+		background: $darkblue;
+		line-height: 1.1em;
+		text-align: center;
+		font-family: 'Roboto Condensed', serif ;
+		font-style: italic;
+		border: 2px solid black;
+		border-left: none;
+		border-bottom: none;
+		border-radius: 0px 10px 0px 0px;
+		@include transition(background .5s ease-in, color .5s ease-in); 
+			&:hover	{
+				background: $lightblue;
+				color: $darkblue;
+				@include transition(background .5s ease-out, color .5s ease-out);
+			}
+		@media screen and (max-width: 770px) {
+			padding-top: 10px;
+			height: auto;
+			border-radius: 0;
+			}
+		}
+	p	{
+		padding: 5px 10px 10px 10px;
+		@include adjust-font-size-to(21px);
+		line-height: 1.55em;
+		font-style: italic;
+		background: $bg-faint;
+		border: 2px solid black;
+		border-radius: 0 0 10px 10px;
+		@include trailer(2); 
+	}
+}
+
+// Content Pages
+
+.main-content {
+	img {
+		margin-bottom: 15px;
+	}
+	p {
+		color: $darkblue;
+		@include adjust-font-size-to(21px);
+		line-height: 1.5em;
+		padding-bottom: 10px;
+	}
+	a {
+		font-family: inherit;
+		font-size: inherit;
+		text-decoration: underline;
+		color: $orange;
+		transition: color .5s;
+		&:hover{
+			color: $midblue;
+			transition: color .5s;
+		}
+		&:visited {
+			color: darken($baseblue, 50%);
+			transition: color .5s;
+			&:hover {
+				color: $midblue;
+				transition: color .5s;
+			}
+		}
+	}
+	img {
+		border-radius: 10px;
+		border: 2px solid $darkblue;
+	}
+	h3 {
+		line-height: 2.25rem;
+		padding: 0 5%;
+		margin-bottom: 10px;
+		@media screen and (max-width: 568px) {
+			line-height: 1.65rem;
+			}
+	}
+}
+
+.secondary-content {
+	h3 {
+		padding-top: 10px;
+	}
+}
+
+// UX Hypothesis
+
+.ux-hypothesis {
+	border: 2px solid black;
+	border-radius: 10px;
+	background: white;
+	@media screen and (max-width: 768px){
+		margin: 0 10px;
+	}
+	h3 {
+		background: $bg-dark;
+		color: $baseblue;
+		text-align: center;
+		padding-bottom: 5px;
+		margin: 0 -15px;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;		
+		border-bottom: 2px solid black;
+	}
+	p {
+		font-weight: 700;
+		padding: 0;
+	}
+}
+
+// UX Classes
+
+.ux-skills {
+	background: white;
+	border: 2px solid black;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	@media screen and (max-width: 768px) {
+		margin-bottom: 0; 
+		border-radius: 7px;
+	}
+	h5 {
+		background: $bg-dark;
+		text-align: center;
+		margin: 0 -15px;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+		border-bottom: 2px solid black;
+	}
+	li {
+		@include adjust-font-size-to(18px);
+		padding: 2px;
+		font-weight: 400;
+	}
+}
+
+.keyterm { // Used by multiple events
+	@include adjust-font-size-to(16px);
+	font-weight: 700;
+	color: darken($baseblue, 10%);
+		@media screen and (min-width: 767px) {
+		@include adjust-font-size-to(18px);
+	}
+}
+
+// WSU
+
+.wushock {
+	img {
+		float: left;
+		width: 20%;
+		margin-right: 10px;	
+	}
+}
+
+// eSports
+
+.sidebar {
+	width: 40%;
+}
+
+// Web Story Portfolio
+
+.portfolio-block {
+	margin-top: 10px;
+	background: $bg-faint;
+	border-radius: 10px;
+	border: 2px solid black;
+	min-height: 500px;
+	a {
+		text-align:center;
+		margin: 0 -15px;
+		color: $lightblue;
+		@include adjust-font-size-to(22px);
+		line-height: 1.5em;
+	}
+	.thumbnail {
+		background: $bg-dark;
+		border-radius: 5px;
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+		border: none;
+		border-bottom: 2px solid black;
+		img {
+			border-radius: 5px;
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+		}
+	}
+	p {
+		min-height: 100px;
+		padding-top: 10px;
+		@include adjust-font-size-to(18px);
+		line-height: 1.7em;
+	}	
+}
+
+.murrow {
+	max-width: 100%;
+	margin: 10px 0;
+	@media screen and (max-width: 768px) {
+		padding: 0 10%;
+	}
+}
+
+
+.award {
+	margin-top: 10px;
+	background: $bg-faint;
+	border-radius: 10px;
+	border: 2px solid black;
+	p {
+		min-height: 100px;
+		padding-top: 10px;
+		@include adjust-font-size-to(18px);
+		line-height: 1.7em;
+	}
+}
+
+// Designs
+
+.design-block {
+	margin-top: 10px;
+	background: $bg-faint;
+	border-radius: 10px;
+	border: 2px solid black;
+	min-height: 500px;
+	a {
+		padding: 2px;
+		text-align:center;
+		margin: 0 -15px;
+		color: $lightblue;
+		font-size: 1.3em;
+	}
+}
+
+// Blog formatting
+
+.second-nav {
+	display: block;
+	float:right;
+	text-align: center;
+	color: $darkblue;
+	a {
+		display: block;
+		border:2px solid black;
+		border-radius: 5px;
+		background: $bg-faint;
+		padding: 2px 5px;
+		text-decoration: none;
+		transition: background .5s ease-in-out;
+		li {
+			color: $orange;
+		}
+		&:hover {
+			background: $darkblue;
+			transition: background .5s ease-in-out;
+		}
+	}
+}	
+
+.blog {
+	h5 {
+		font-size: 3em;
+	}
+}
+
+.blog-list {
+	li {
+		margin-left: 5%;
+		font-size: 1.1em;
+	}
+}
+
+hr {
+	border-top: 1px solid $darkblue;
+}
+
+// Images
+
+.headshot {
+	border-radius: 10px;
+	float:left;
+	margin-right: 5%;
+	border: 2px solid $darkblue;
+}
+
+// About

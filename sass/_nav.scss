@@ -1,0 +1,86 @@
+@import "global";
+
+nav {
+	h1 {
+		@include adjust-font-size-to(32px);
+		@include leader(1);
+		@include trailer(1);
+		color: $faint;
+		transition: color .5s;
+		margin: 1px;
+		@media only screen
+			and (max-width : 820px) {
+				@include adjust-font-size-to(26px);
+			}
+
+			@media only screen
+			and (max-width : 740px) {
+				@include adjust-font-size-to(20px);
+			}
+		&:hover {
+			color: complement($baseblue);
+			transition: color .5s;
+			}
+		}
+	li {
+		padding: .4% 10px;
+		margin: 10px 0px 10px 0;
+		min-width: 180px;
+		a {
+			text-align: center;
+			@include adjust-font-size-to(24px);
+			color: $faint; //$darkblue
+			font-style: italic;
+			border: 1px solid black;
+			border-radius: 5px;
+			background: transparent; //$lightblue
+			transition: background .75s, color .75s;
+			&:hover, &:focus {
+				color: $faint;
+				transition: color .75s;
+				border: 0;
+				}
+			}
+		ul {
+			padding: 0;
+			margin: 0;
+			li {
+				padding: 0;
+				margin: 0;
+				background: $darkblue;
+				color: $faint;
+			}
+		}
+	}
+}
+
+.dropdown-menu>li>a {
+	color: inherit;
+}
+
+.nav>li>a:hover, .nav>li>a:focus, .open>a, .open>a:hover, .nav .open>a:focus {
+	color: $darkblue;
+	background-color: $lightblue; //$darkblue
+}
+
+.dropdown-menu {
+	li {
+		a {
+			color: $faint;
+			text-align: center;
+			&:focus, &:hover {
+				background-color: $lightblue;
+			}
+		}
+	}
+	padding: 0;
+}
+
+.navbar {
+	border-bottom: 2px solid black;
+	margin:0;
+}
+
+.glyphicon {
+	color: $baseblue;
+}

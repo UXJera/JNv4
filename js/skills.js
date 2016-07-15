@@ -1,0 +1,27 @@
+var skills = { "skill" : [
+	{ "name": "HTML5",
+		"value": 4
+		},
+		{ "name": "HTML5",
+		"value": 4
+		},
+			{ "name": "CSS3",
+		"value": 4
+		},
+			{ "name": "JavaScript",
+		"value": 3
+		},
+			{ "name": "jQuery",
+		"value": 3
+		},
+			{ "name": "Bootstrap",
+		"value": 3
+		},
+			{ "name": "Angular.js",
+		"value": 2
+		},
+			{ "name": "Ruby",
+		"value": 1
+		}
+	],
+};

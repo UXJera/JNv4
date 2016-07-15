@@ -45,3 +45,13 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# My Stuff
+
+_do-not-upload
+.sass-cache
+.sass-cache/*
+archive
+backup
+samplecode
+bootstrap-3.3.2-dist

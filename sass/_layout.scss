@@ -1,0 +1,197 @@
+@import "global";
+
+//Header
+
+.navbar	{
+	background: $bg-dark;
+}
+
+// carousel
+
+.item.active img {width: 100%; margin: 1em auto;}
+
+//Excerpt Banner
+
+.banner {
+	width: 100%;
+	//padding-top: 70px;
+	text-align: center;
+	background: url("../img/banner-bg.jpg") $midblue;
+	color: $lightblue;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	@include clearfix;
+	h2 {
+		margin: 0 -15px;
+		text-align: center;
+		font-family: Raleway, serif;
+		font-weight: 700;
+
+		@media screen and (max-width: 768px) {
+			font-size: 2.2em;
+			}
+		@media screen and (max-width: 540px) {
+			@include adjust-font-size-to(24px);
+		}
+	}
+	@media screen and (max-width: 700px) {
+		//font-size: .8em;
+	}
+	h3 {
+		@include adjust-font-size-to(30px);
+		padding-top: 10px;
+		@media screen and (max-width: 768px) {
+		}
+	}
+	.missionStatement {
+		@include adjust-font-size-to(24px);
+		font-weight: 400;
+		padding: 0 10px;
+		margin:  10px 10px 0 10px;
+		@media screen and (max-width: 600px) {
+			@include adjust-font-size-to(18px);
+		}
+	}
+}
+
+// Home page carousel
+
+.carousel {
+	min-height: 75vh;
+	background: $faint; //url(../img/triangular-bg-sm.jpg);
+	border-bottom: 2px solid black;
+	padding-top: 0;
+	img {
+		margin-top: 10px;
+		max-height:  538px;
+		border-radius:10px;
+		border: 2px solid black;
+	}
+	a, h2, p {font-family: 'Roboto Condensed', serif;}
+	h2 {text-align:center;}
+	a {
+		font-weight: 700;
+		text-decoration: none;
+		transition: color .5s ease-out;
+		&:hover {
+			color: $orange;
+			transition: color .5s ease-out;
+		}
+	}
+	carousel-control.left, carousel-control.right {
+		color: $darkblue;
+	}
+	.carousel-indicators {
+		li {
+			border: 1px solid $darkblue;
+		}
+		.active {
+			background-color: $darkblue;
+		}
+	}
+	.btn.c2a {
+		display: block;
+		margin: 0 auto 20px auto;
+		border: 2px solid black;
+		font-size: 1.3em;
+		background: $darkblue;
+		&:hover{
+			background: $lightblue;
+			transition: background .5s ease-in;
+		}
+		a {
+			color: $faint;
+			&:hover {
+				color: $darkblue;
+			}
+		}
+	}
+}
+
+//Home sidebar & Twitter
+
+.home-side {
+	text-align: center;
+	border: 2px solid black;
+	border-radius: 10px;
+	background: $bg-faint;
+	color: $darkblue;
+	padding: 0;
+	h3 {
+		text-align: center;
+		background: $darkblue;
+		border-bottom: 2px solid black;
+		a {
+			color: $baseblue;
+			transition: color .5s ease-out;
+			&:hover {
+				color: $faint;
+				transition: color .5s ease-out;
+			}
+		}
+	}
+	ul {
+		li {
+			a {
+				@include adjust-font-size-to(22px);
+				line-height: 1.7em;
+				color: $orange;
+				transition: color .5s ease-out;
+				font-weight: 700;
+				&:hover {
+					color: $baseblue;
+					transition: color .5s ease-out;
+				}
+			}
+			&:first-child {
+				@include adjust-font-size-to(28px);
+				color: $darkblue;
+			}
+		}
+	}
+}
+
+.no-bg {
+	color: $orange;
+	-webkit-text-stroke: 1px black;
+}
+
+
+// Footer
+
+footer	{
+	margin-top: 10px;
+	height: auto;
+	display:block;
+	text-align: center;
+	border-top: 2px solid black;
+	padding: 7px 0;
+	background: $bg-dark;
+		a {
+			background: transparent;
+			text-align: center;
+			text-decoration: none;
+			color:$baseblue ;
+			border-radius: 10px;
+			font-style: italic;
+			margin-right:.8%;
+			min-width: 150px;
+			transition: background .5s, color .5s,;
+		}
+	@media screen and (min-width: 767px) {
+		a {
+			display:inline-block;
+			position:relative;
+			&:hover	{
+				background: $baseblue;
+				color: $darkblue;
+				transition: background .5s, color .5s,;
+			}
+		}
+	}
+}
+
+
+@media screen and (min-width: 1000px) {
+	.item.active img {width: 70%; margin: 1em auto;}
+}

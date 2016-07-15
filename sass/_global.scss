@@ -1,0 +1,106 @@
+@import "compass/typography/vertical_rhythm";
+@import "color";
+@import "fonts";
+
+// Global Variables
+
+$base-font-size: 18px !default;
+$base-line-height: 24px;
+@include establish-baseline($base-font-size);
+
+body {
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+	color: #222;
+	background: url("../img/crystal-pattern-baseblue.jpg") repeat fixed $baseblue ; //url("../img/crystal-pattern-baseblue.jpg")
+	font-family: 'Roboto Condensed', arial, serif;
+	font-weight: 400;
+	@media only screen 
+		and (min-device-width : 768px) 
+		and (max-device-width : 1024px) {
+				@include adjust-font-size-to(14px);
+				}
+	@media screen and (max-device-width : 568px) { 
+			@include adjust-font-size-to(14px);
+	}
+}
+
+
+a {
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+h1 {
+	@media screen and (max-width: 568px){
+		@include adjust-font-size-to(20px);
+	}
+}
+
+h1, h2, h3, h4, a, li {
+	font-family: 'Roboto Condensed', serif;
+	font-weight: 700;
+
+}
+
+h2 {
+	@include adjust-font-size-to(48px);
+	@media screen and (max-width: 568px){
+		@include adjust-font-size-to(28px);
+	}
+}
+
+h3 {
+	@include adjust-font-size-to(28px);
+	@include leader(1);
+	@include trailer(1);
+	margin-top: 0;
+	@media only screen 
+		and (max-width : 568px) {
+			@include adjust-font-size-to(20px);
+	}
+}
+
+h4 {
+	color: $orange;
+	font-size: 1.5em;
+	margin-left: 5%;
+	display: inline;
+	background: $bg-faint;
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 2px 5px;
+}
+
+h5 {
+	color: $orange;
+	@include adjust-font-size-to(28px);
+	font-weight: 700;
+	margin-left: 5%;
+	-webkit-text-stroke: 1px black;
+}
+
+h6 {
+	@include adjust-font-size-to(14px);
+	margin-top: -2.5%;
+	margin-left: 10%;
+	margin-bottom: 1%;
+}
+
+
+.container {
+	max-width: 1120px;
+}
+
+.container.main-content {
+	margin-top: 10px;
+	border: 2px solid black;
+	border-radius: 10px;
+	background: $bg-faint;
+}
+
+.extra-ten {
+	margin-top: 10px;
+}

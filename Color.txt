@@ -1,0 +1,8 @@
+Colors:
+
+#CFF7FF     <--- Light Blue
+#6FE8FF     <--- Seafoam
+#0FD8FF     <--- Baby Blue
+#0BA2BF     <--- Dark Teal
+#086C80     <--- Turquoise
+#043640     <--- Dusk Shade

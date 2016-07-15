@@ -1,0 +1,220 @@
+@import "color";
+@import "compass/css3";
+@import "global";
+
+$border3px: 3px solid black;
+
+%valuex {
+	width:100%;
+		div {
+			margin: 20px 0px;
+			min-height: 25px;
+			text-align: right;
+			border: 2px solid #black;
+			border-left: none;
+			border-top-right-radius: 15px;
+			border-bottom-right-radius: 15px;
+			@include box-shadow(-3px -5px 10px black inset);
+			@include transition(background-color 0.5s ease-out);
+			&:hover{
+				@include transition(background-color 0.5s ease-out);
+		}
+		&.hidden-bar {
+			opacity:0;
+			@include transition(opacity 0.5s ease-out);
+		}		
+	}
+}
+
+
+.container-box {
+	border: $border3px;
+}
+
+.outer-box {
+	background-color: #ccc;
+}
+
+.title-box {
+	@extend .outer-box;
+	padding-bottom: -10px;
+	p {
+		text-align: center;
+		font-size: 1.75em;
+		line-height: 1.55em;
+	}
+}	
+
+.top-box-1 {
+	height: 75px;
+	border-bottom: $border3px;
+	button {
+		display: block;
+		margin: 20px auto;
+	}
+}
+
+.top-box-2 {
+	height: 75px;
+	border-bottom: $border3px;
+	padding-bottom: 10px;
+}
+
+.skillnames {
+	display: inline;
+	position: relative;
+	p {
+		@adjust-font-size-to(26px);
+		display: inline-block;
+		@include transform(rotate(-25deg) translateY(25px));
+		position: relative;
+		}
+	#part0 {
+		left: 3%
+	}
+	#part1 {
+		left: 8.5%
+	}
+	#part2 {
+		left: 14%;
+	}
+	#part3 {
+		left: 32%
+	}
+}
+
+.buttons {
+	background: #ccc;
+}
+
+.spacing {
+	min-height: 25px;
+	padding: 20px 0;
+	img {
+		display:inline ;
+		float: left;
+		height: 50px;
+		width: 50px;
+		margin-left: 15px ;
+		margin-top: -15px;
+	}
+	button {
+		display: block;
+		float: right;
+		height: 35px;
+		margin: 0 2%;
+		margin-top: -6px;
+	}
+}
+
+.shadow {
+	background: inline-image('../img/gridtest.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	border-left: $border3px;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.value1	 { 				
+	@extend %valuex;
+		div {
+			width: 10%;
+			background: $value1 repeat;
+			&:hover{
+				background-color: $value2;
+			}
+		//@extend %hidden-bar;		
+	}
+}
+
+.value2 {
+	@extend %valuex;
+		div {
+		width: 20%;
+		background-color: $value2;
+		&:hover{
+			background-color: $value3;
+		}
+	}
+}
+
+.value3 {
+	@extend %valuex;
+		div {
+		width: 30%;
+		background-color: $value3;	
+		&:hover{
+			background-color: $value4;	
+		}
+		//@extend %hidden-bar;
+	}
+}
+
+.value4 {
+	@extend %valuex;
+	div {
+		width: 40%;
+		background-color: $value4;
+		&:hover{
+			background-color: $value5;
+		}	
+	}
+}
+
+.value5 {
+	@extend %valuex;
+	div {
+		width: 50%;
+		background-color: $value5;
+		&:hover{
+			background-color: $value6;
+		}	
+	}
+}
+
+.value6 {
+	@extend %valuex;
+	div {
+		width: 60%;
+		background-color: $value6;
+		&:hover{
+			background-color: $value7;
+		}	
+	}
+}
+
+.value7 {
+	@extend %valuex;
+	div {
+		width: 70%;
+		background-color: $value7;
+		&:hover{
+			background-color: $value8;
+		}	
+	}
+}
+
+.value8 {
+	@extend %valuex;
+	div {
+		width: 80%;
+		background-color: $value8;
+		&:hover{
+			background-color: $value9;
+		}	
+	}
+}
+
+.value9 {
+	@extend %valuex;
+	div {
+		width: 90%;
+		background-color: $value9;	
+		&:hover{
+			background-color: #FFD700;
+			transition: background-color 2.5s ease-in;		
+		}	
+	}
+}
